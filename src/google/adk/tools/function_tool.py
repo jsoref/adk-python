@@ -107,7 +107,7 @@ You could retry calling this tool, but it is IMPORTANT for you to provide all th
 
     # Functions are callable objects, but not all callable objects are functions
     # checking coroutine function is not enough. We also need to check whether
-    # Callable's __call__ function is a coroutine funciton
+    # Callable's __call__ function is a coroutine function
     if (
         inspect.iscoroutinefunction(self.func)
         or hasattr(self.func, '__call__')
