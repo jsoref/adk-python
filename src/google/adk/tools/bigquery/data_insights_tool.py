@@ -35,7 +35,7 @@ def ask_data_insights(
 ) -> Dict[str, Any]:
   """Answers questions about structured data in BigQuery tables using natural language.
 
-  This function takes auser's question (which can include conversational
+  This function takes a user's question (which can include conversational
   history for context) andreferences to specific BigQuery tables, and sends
   them to a stateless conversational API.
 
