@@ -53,7 +53,7 @@ root_agent = Agent(
       * The latest comment is asking a question or requesting information.
     4. Use the `VertexAiSearchTool` to find relevant information before answering.
     5. If you can find relevant information, use the `add_comment_to_discussion` tool to add a comment to the discussion.
-    6. If you post a commment and the discussion does not have a label named {BOT_RESPONSE_LABEL},
+    6. If you post a comment and the discussion does not have a label named {BOT_RESPONSE_LABEL},
        add the label {BOT_RESPONSE_LABEL} to the discussion using the `add_label_to_discussion` tool.
 
 
