@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+from __future__ import annotations
 
 from abc import ABC
 from enum import Enum
@@ -47,7 +48,7 @@ class EvaluationResult(BaseModel):
 
 
 class Evaluator(ABC):
-  """A merics evaluator interface."""
+  """A metrics evaluator interface."""
 
   def evaluate_invocations(
       self,

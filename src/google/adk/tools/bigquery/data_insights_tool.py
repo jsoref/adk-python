@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+from __future__ import annotations
 
 import json
 from typing import Any
@@ -34,8 +35,8 @@ def ask_data_insights(
 ) -> Dict[str, Any]:
   """Answers questions about structured data in BigQuery tables using natural language.
 
-  This function takes auser's question (which can include conversational
-  history for context) andreferences to specific BigQuery tables, and sends
+  This function takes a user's question (which can include conversational
+  history for context) and references to specific BigQuery tables, and sends
   them to a stateless conversational API.
 
   The API uses a GenAI agent to understand the question, generate and execute

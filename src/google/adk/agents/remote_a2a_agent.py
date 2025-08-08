@@ -525,7 +525,7 @@ class RemoteA2aAgent(BaseAgent):
     raise NotImplementedError(
         f"_run_live_impl for {type(self)} via A2A is not implemented."
     )
-    # This makes the function an async generator but the yield is still unreachable
+    # This makes the function into an async generator but the yield is still unreachable
     yield
 
   async def cleanup(self) -> None:

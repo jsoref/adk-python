@@ -101,7 +101,7 @@ def execute_sql(
     elif config.write_mode == WriteMode.PROTECTED:
       # In protected write mode, write operation only to a temporary artifact is
       # allowed. This artifact must have been created in a BigQuery session. In
-      # such a scenario the session info (session id and the anonymous dataset
+      # such a scenario, the session info (session id and the anonymous dataset
       # containing the artifact) is persisted in the tool context.
       bq_session_info = tool_context.state.get(BIGQUERY_SESSION_INFO_KEY, None)
       if bq_session_info:
@@ -328,7 +328,7 @@ _execute_sql_write_examples = """
   """
 
 
-_execute_sql_protecetd_write_examples = """
+_execute_sql_protected_write_examples = """
       Create a temporary table with schema prescribed:
 
           >>> execute_sql("my_project",
@@ -494,7 +494,7 @@ def get_execute_sql(config: BigQueryToolConfig) -> Callable[..., dict]:
 
   # Now, set the new docstring
   if config.write_mode == WriteMode.PROTECTED:
-    execute_sql_wrapper.__doc__ += _execute_sql_protecetd_write_examples
+    execute_sql_wrapper.__doc__ += _execute_sql_protected_write_examples
   else:
     execute_sql_wrapper.__doc__ += _execute_sql_write_examples
 

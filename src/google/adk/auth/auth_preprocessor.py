@@ -93,7 +93,7 @@ class _AuthLlmRequestProcessor(BaseLlmRequestProcessor):
       if not tools_to_resume:
         continue
 
-      # found the the system long running request euc function call
+      # found the system long running request euc function call
       # looking for original function call that requests euc
       for j in range(i - 1, -1, -1):
         event = events[j]

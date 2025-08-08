@@ -47,13 +47,13 @@ root_agent = Agent(
     1. Use the `get_discussion_and_comments` tool to get the details of the discussion including the comments.
     2. Focus on the latest comment but reference all comments if needed to understand the context.
       * If there is no comment at all, just focus on the discussion title and body.
-    3. If all the following conditions are met, try to add a comment to the discussion, otherwise, do not respond:
+    3. If all the following conditions are met, try to add a comment to the discussion; otherwise, do not respond:
       * The discussion is not closed.
       * The latest comment is not from you or other agents (marked as "Response from XXX Agent").
       * The latest comment is asking a question or requesting information.
     4. Use the `VertexAiSearchTool` to find relevant information before answering.
     5. If you can find relevant information, use the `add_comment_to_discussion` tool to add a comment to the discussion.
-    6. If you post a commment and the discussion does not have a label named {BOT_RESPONSE_LABEL},
+    6. If you post a comment and the discussion does not have a label named {BOT_RESPONSE_LABEL},
        add the label {BOT_RESPONSE_LABEL} to the discussion using the `add_label_to_discussion` tool.
 
 
@@ -63,7 +63,7 @@ root_agent = Agent(
         information that is not in the document store. Do not invent citations which are not in the document store.
       * **Be Objective**: your answer should be based on the facts you found in the document store, do not be misled by user's assumptions or user's understanding of ADK.
       * If you can't find the answer or information in the document store, **do not** respond.
-      * Inlclude a short summary of your response in the comment as a TLDR, e.g. "**TLDR**: <your summary>".
+      * Include a short summary of your response in the comment as a TLDR, e.g. "**TLDR**: <your summary>".
       * Have a divider line between the TLDR and your detail response.
       * Do not respond to any other discussion except the one specified by the user.
       * Please include your justification for your decision in your output

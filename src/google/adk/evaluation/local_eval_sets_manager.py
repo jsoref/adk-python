@@ -85,11 +85,11 @@ def _convert_invocation_to_pydantic_schema(
   )
 
 
-def convert_eval_set_to_pydanctic_schema(
+def convert_eval_set_to_pydantic_schema(
     eval_set_id: str,
     eval_set_in_json_format: list[dict[str, Any]],
 ) -> EvalSet:
-  r"""Returns an pydantic EvalSet generated from the json representation.
+  r"""Returns a pydantic EvalSet generated from the json representation.
 
     Args:
       eval_set_id: Eval set id.
@@ -183,7 +183,7 @@ def load_eval_set_from_file(
     except ValidationError:
       # We assume that the eval data was specified in the old format and try
       # to convert it to the new format.
-      return convert_eval_set_to_pydanctic_schema(
+      return convert_eval_set_to_pydantic_schema(
           eval_set_id, json.loads(content)
       )
 
@@ -207,7 +207,7 @@ class LocalEvalSetsManager(EvalSetsManager):
   @override
   def create_eval_set(self, app_name: str, eval_set_id: str):
     """Creates an empty EvalSet given the app_name and eval_set_id."""
-    self._validate_id(id_name="Eval Set Id", id_value=eval_set_id)
+    self._validate_id(id_name="Eval Set ID", id_value=eval_set_id)
 
     # Define the file path
     new_eval_set_path = self._get_eval_set_file_path(app_name, eval_set_id)
@@ -256,7 +256,7 @@ class LocalEvalSetsManager(EvalSetsManager):
   def get_eval_case(
       self, app_name: str, eval_set_id: str, eval_case_id: str
   ) -> Optional[EvalCase]:
-    """Returns an EvalCase if found, otherwise None."""
+    """Returns an EvalCase if found; otherwise, None."""
     eval_set = self.get_eval_set(app_name, eval_set_id)
     if not eval_set:
       return None

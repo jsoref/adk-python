@@ -7,7 +7,7 @@ This sample demonstrates how to use the `ApplicationIntegrationToolset` within a
 ## Prerequisites
 
 1.  **Set up Integration Connection:**
-    *   You need an existing [Integration connection](https://cloud.google.com/integration-connectors/docs/overview) configured to interact with your Jira instance. Follow the [documentation](https://google.github.io/adk-docs/tools/google-cloud-tools/#use-integration-connectors) to provision the Integration Connector in Google Cloud and then use this [documentation](https://cloud.google.com/integration-connectors/docs/connectors/jiracloud/configure) to create an JIRA connection. Note the `Connection Name`, `Project ID`, and `Location` of your connection.
+    *   You need an existing [Integration connection](https://cloud.google.com/integration-connectors/docs/overview) configured to interact with your Jira instance. Follow the [documentation](https://google.github.io/adk-docs/tools/google-cloud-tools/#use-integration-connectors) to provision the Integration Connector in Google Cloud and then use this [documentation](https://cloud.google.com/integration-connectors/docs/connectors/jiracloud/configure) to create an Jira connection. Note the `Connection Name`, `Project ID`, and `Location` of your connection.
     * 
 
 2.  **Configure Environment Variables:**
@@ -15,7 +15,7 @@ This sample demonstrates how to use the `ApplicationIntegrationToolset` within a
     *   Add the following variables to the `.env` file, replacing the placeholder values with your actual connection details:
 
       ```dotenv
-      CONNECTION_NAME=<YOUR_JIRA_CONNECTION_NAME>
+      CONNECTION_NAME=<YOUR_Jira_CONNECTION_NAME>
       CONNECTION_PROJECT=<YOUR_GOOGLE_CLOUD_PROJECT_ID>
       CONNECTION_LOCATION=<YOUR_CONNECTION_LOCATION>
       ```

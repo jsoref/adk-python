@@ -174,7 +174,7 @@ class BaseAgent(BaseModel):
       invalid_fields = set(update) - allowed_fields
       if invalid_fields:
         raise ValueError(
-            f'Cannot update non-existent fields in {self.__class__.__name__}:'
+            f'Cannot update nonexistent fields in {self.__class__.__name__}:'
             f' {invalid_fields}'
         )
 
@@ -514,7 +514,7 @@ class BaseAgent(BaseModel):
     """Creates an agent from a config.
 
     If sub-classes uses a custom agent config, override `_from_config_kwargs`
-    method to return an updated kwargs for agent construstor.
+    method to return an updated kwargs for agent constructor.
 
     Args:
       config: The config to create the agent from.
@@ -537,7 +537,7 @@ class BaseAgent(BaseModel):
   ) -> Dict[str, Any]:
     """Parses the config and returns updated kwargs to construct the agent.
 
-    Sub-classes should override this method to use a custome agent config class.
+    Sub-classes should override this method to use a custom agent config class.
 
     Args:
       config: The config to parse.

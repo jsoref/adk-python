@@ -127,7 +127,7 @@ def convert_gcs_to_https(gcs_uri: str) -> Optional[str]:
       # Use the directory path if it is a index file
       final_path_segment = os.path.dirname(path_after_docs)
     else:
-      # Otherwise, use the file name without extention
+      # Otherwise, use the file name without extension
       final_path_segment = path_after_docs.removesuffix(".md")
 
     if final_path_segment and not final_path_segment.endswith("/"):
@@ -139,7 +139,7 @@ def convert_gcs_to_https(gcs_uri: str) -> Optional[str]:
     if _check_url_exists(potential_url):
       return potential_url
     else:
-      # If it doesn't exist, fallback to the regular github url
+      # If it doesn't exist, fall back to the regular github url
       return _generate_github_url(prefix, relative_path)
 
   # Convert the links for other cases, e.g. adk-python

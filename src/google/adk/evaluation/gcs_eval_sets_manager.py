@@ -101,7 +101,7 @@ class GcsEvalSetsManager(EvalSetsManager):
   @override
   def create_eval_set(self, app_name: str, eval_set_id: str):
     """Creates an empty EvalSet and saves it to GCS."""
-    self._validate_id(id_name="Eval Set Id", id_value=eval_set_id)
+    self._validate_id(id_name="Eval Set ID", id_value=eval_set_id)
     new_eval_set_blob_name = self._get_eval_set_blob_name(app_name, eval_set_id)
     if self.bucket.blob(new_eval_set_blob_name).exists():
       raise ValueError(

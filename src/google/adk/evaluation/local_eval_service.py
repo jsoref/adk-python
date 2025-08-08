@@ -120,7 +120,7 @@ class LocalEvalService(BaseEvalService):
 
     async def run_inference(eval_case):
       async with semaphore:
-        return await self._perform_inference_sigle_eval_item(
+        return await self._perform_inference_single_eval_item(
             app_name=inference_request.app_name,
             eval_set_id=inference_request.eval_set_id,
             eval_case=eval_case,
@@ -176,7 +176,7 @@ class LocalEvalService(BaseEvalService):
     """Returns EvalCaseResult for the given inference result.
 
     A single inference result can have multiple invocations. For each
-    invocaiton, this method evaluates the metrics present in evaluate config.
+    invocation, this method evaluates the metrics present in evaluate config.
 
     The EvalCaseResult contains scores for each metric per invocation and the
     overall score.
@@ -199,7 +199,7 @@ class LocalEvalService(BaseEvalService):
 
     # We also keep track of the overall score for a metric, derived from all
     # invocation. For example, if we were keeping track the metric that compares
-    # how well is the final resposne as compared to a golden answer, then each
+    # how well is the final response as compared to a golden answer, then each
     # invocation will have the value of this metric. We will also have an
     # overall score using aggregation strategy across all invocations. This
     # would be the score for the eval case.
@@ -233,7 +233,7 @@ class LocalEvalService(BaseEvalService):
           expected_invocations=eval_case.conversation,
       )
 
-      # Track overall scrore across all invocations.
+      # Track overall score across all invocations.
       overall_eval_metric_results.append(
           EvalMetricResult(
               metric_name=eval_metric.metric_name,
@@ -325,8 +325,8 @@ class LocalEvalService(BaseEvalService):
       self, overall_eval_metric_results: list[EvalMetricResult]
   ) -> EvalStatus:
     final_eval_status = EvalStatus.NOT_EVALUATED
-    # Go over the all the eval statuses and mark the final eval status as
-    # passed if all of them pass, otherwise mark the final eval status to
+    # Go over all the eval statuses and mark the final eval status as
+    # passed if all of them pass; otherwise, mark the final eval status to
     # failed.
     for overall_eval_metric_result in overall_eval_metric_results:
       overall_eval_status = overall_eval_metric_result.eval_status
@@ -342,7 +342,7 @@ class LocalEvalService(BaseEvalService):
 
     return final_eval_status
 
-  async def _perform_inference_sigle_eval_item(
+  async def _perform_inference_single_eval_item(
       self,
       app_name: str,
       eval_set_id: str,

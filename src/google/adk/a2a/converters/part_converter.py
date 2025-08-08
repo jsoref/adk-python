@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """
-module containing utilities for conversion betwen A2A Part and Google GenAI Part
+module containing utilities for conversion between A2A Part and Google GenAI Part
 """
 
 from __future__ import annotations
@@ -84,11 +84,11 @@ def convert_a2a_part_to_genai_part(
       return None
 
   if isinstance(part, a2a_types.DataPart):
-    # Conver the Data Part to funcall and function reponse.
+    # Convert the Data Part to funcall and function response.
     # This is mainly for converting human in the loop and auth request and
     # response.
-    # TODO once A2A defined how to suervice such information, migrate below
-    # logic accordinlgy
+    # TODO once A2A defined how to service such information, migrate below
+    # logic accordingly
     if (
         part.metadata
         and _get_adk_metadata_key(A2A_DATA_PART_METADATA_TYPE_KEY)
@@ -179,11 +179,11 @@ def convert_genai_part_to_a2a_part(
 
     return a2a_types.Part(root=a2a_part)
 
-  # Conver the funcall and function reponse to A2A DataPart.
+  # Convert the funcall and function response to A2A DataPart.
   # This is mainly for converting human in the loop and auth request and
   # response.
-  # TODO once A2A defined how to suervice such information, migrate below
-  # logic accordinlgy
+  # TODO once A2A defined how to service such information, migrate below
+  # logic accordingly
   if part.function_call:
     return a2a_types.Part(
         root=a2a_types.DataPart(

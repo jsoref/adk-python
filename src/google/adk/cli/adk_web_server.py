@@ -202,7 +202,7 @@ class AdkWebServer:
   If you pass in a web_assets_dir, the static assets will be served under
   /dev-ui in addition to the API endpoints created by default.
 
-  You can add add additional API endpoints by modifying the FastAPI app
+  You can add additional API endpoints by modifying the FastAPI app
   instance returned by get_fast_api_app as this class exposes the agent runners
   and most other bits of state retained during the lifetime of the server.
 
@@ -245,7 +245,7 @@ class AdkWebServer:
     self.eval_sets_manager = eval_sets_manager
     self.eval_set_results_manager = eval_set_results_manager
     self.agents_dir = agents_dir
-    # Internal propeties we want to allow being modified from callbacks.
+    # Internal properties we want to allow being modified from callbacks.
     self.runners_to_clean: set[str] = set()
     self.current_app_name_ref: SharedValue[str] = SharedValue(value="")
     self.runner_dict = {}

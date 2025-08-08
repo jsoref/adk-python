@@ -39,7 +39,7 @@ class GeminiLlmConnection(BaseLlmConnection):
     """Sends the conversation history to the gemini model.
 
     You call this method right after setting up the model connection.
-    The model will respond if the last content is from user, otherwise it will
+    The model will respond if the last content is from user; otherwise, it will
     wait for new user input before responding.
 
     Args:
@@ -220,7 +220,7 @@ class GeminiLlmConnection(BaseLlmConnection):
         ]
         yield LlmResponse(content=types.Content(role='model', parts=parts))
       if message.session_resumption_update:
-        logger.info('Redeived session reassumption message: %s', message)
+        logger.info('Received session reassumption message: %s', message)
         yield (
             LlmResponse(
                 live_session_resumption_update=message.session_resumption_update

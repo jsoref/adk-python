@@ -43,7 +43,7 @@ from .eval_set import EvalSet
 from .eval_sets_manager import EvalSetsManager
 from .evaluator import EvalStatus
 from .in_memory_eval_sets_manager import InMemoryEvalSetsManager
-from .local_eval_sets_manager import convert_eval_set_to_pydanctic_schema
+from .local_eval_sets_manager import convert_eval_set_to_pydantic_schema
 
 logger = logging.getLogger("google_adk." + __name__)
 
@@ -130,7 +130,7 @@ class AgentEvaluator:
         the agent. There is convention in place here, where the code is going to
         look for 'root_agent' in the loaded module.
       eval_set: The eval set.
-      criteria: Evauation criterias, a dictionary of metric names to their
+      criteria: Evaluation criteria, a dictionary of metric names to their
         respective thresholds.
       num_runs: Number of times all entries in the eval dataset should be
         assessed.
@@ -267,7 +267,7 @@ class AgentEvaluator:
       try:
         eval_set = EvalSet.model_validate_json(content)
         assert len(initial_session) == 0, (
-            "Intial session should be specified as a part of EvalSet file."
+            "Initial session should be specified as a part of EvalSet file."
             " Explicit initial session is only needed, when specifying data in"
             " the older schema."
         )
@@ -299,7 +299,7 @@ class AgentEvaluator:
         "data": data,
         "initial_session": initial_session,
     }
-    return convert_eval_set_to_pydanctic_schema(
+    return convert_eval_set_to_pydantic_schema(
         eval_set_id=str(uuid.uuid4()), eval_set_in_json_format=[eval_data]
     )
 
@@ -559,7 +559,7 @@ class AgentEvaluator:
   def _get_eval_metric_results_with_invocation(
       eval_results_per_eval_id: list[EvalCaseResult],
   ) -> dict[str, list[_EvalMetricResultWithInvocation]]:
-    """Retruns _EvalMetricResultWithInvocation grouped by metric.
+    """Returns _EvalMetricResultWithInvocation grouped by metric.
 
     EvalCaseResult contain results for each metric per invocation.
 
