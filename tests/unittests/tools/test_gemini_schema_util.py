@@ -471,7 +471,7 @@ class TestToGeminiSchema:
         "properties": {
             "case_id": {
                 "description": "The ID of the case.",
-                "title": "Case Id",
+                "title": "Case ID",
                 "type": "string",
             },
             "next_page_token": {
@@ -492,7 +492,7 @@ class TestToGeminiSchema:
         "properties": {
             "case_id": {
                 "description": "The ID of the case.",
-                "title": "Case Id",
+                "title": "Case ID",
                 "type": "string",
             },
             "next_page_token": {
