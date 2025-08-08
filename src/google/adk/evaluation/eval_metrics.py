@@ -133,7 +133,7 @@ class EvalMetricResultPerInvocation(BaseModel):
 
   eval_metric_results: list[EvalMetricResult] = Field(
       default=[],
-      description="Eval resutls for each applicable metric.",
+      description="Eval results for each applicable metric.",
   )
 
 
