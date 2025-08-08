@@ -299,7 +299,7 @@ root_agent = Agent(
       # 4. Steps
       When you are given a PR, here are the steps you should take:
       - Call the `get_pull_request_details` tool to get the details of the PR.
-      - Skip the PR (i.e. do not label or comment) if the PR is closed or is labeled with "{BOT_LABEL}" or "google-contributior".
+      - Skip the PR (i.e. do not label or comment) if the PR is closed or is labeled with "{BOT_LABEL}" or "google-contributor".
       - Check if the PR is following the contribution guidelines.
         - If it's not following the guidelines, recommend or add a comment to the PR that points to the contribution guidelines (https://github.com/google/adk-python/blob/main/CONTRIBUTING.md).
         - If it's following the guidelines, recommend or add a label to the PR.
