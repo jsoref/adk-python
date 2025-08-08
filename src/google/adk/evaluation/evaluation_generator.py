@@ -41,7 +41,7 @@ from .eval_set import EvalSet
 class EvalCaseResponses(BaseModel):
   """Contains multiple responses associated with an EvalCase.
 
-  Multiple responses are a result of repeated requests to genereate inferences.
+  Multiple responses are a result of repeated requests to generate inferences.
   """
 
   eval_case: EvalCase
