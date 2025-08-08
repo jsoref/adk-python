@@ -233,7 +233,7 @@ class LocalEvalService(BaseEvalService):
           expected_invocations=eval_case.conversation,
       )
 
-      # Track overall scrore across all invocations.
+      # Track overall score across all invocations.
       overall_eval_metric_results.append(
           EvalMetricResult(
               metric_name=eval_metric.metric_name,
