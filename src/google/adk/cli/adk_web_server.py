@@ -290,7 +290,7 @@ class AdkWebServer:
     self.eval_sets_manager = eval_sets_manager
     self.eval_set_results_manager = eval_set_results_manager
     self.agents_dir = agents_dir
-    # Internal propeties we want to allow being modified from callbacks.
+    # Internal properties we want to allow being modified from callbacks.
     self.runners_to_clean: set[str] = set()
     self.current_app_name_ref: SharedValue[str] = SharedValue(value="")
     self.runner_dict = {}
