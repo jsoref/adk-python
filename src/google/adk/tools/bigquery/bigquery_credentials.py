@@ -146,7 +146,7 @@ class BigQueryCredentialsManager:
         else None
     )
 
-    # If credentails are empty use the default credential
+    # If credentials are empty use the default credential
     if not creds:
       creds = self.credentials_config.credentials
 
