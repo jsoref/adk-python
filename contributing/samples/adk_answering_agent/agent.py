@@ -47,7 +47,7 @@ root_agent = Agent(
     1. Use the `get_discussion_and_comments` tool to get the details of the discussion including the comments.
     2. Focus on the latest comment but reference all comments if needed to understand the context.
       * If there is no comment at all, just focus on the discussion title and body.
-    3. If all the following conditions are met, try to add a comment to the discussion, otherwise, do not respond:
+    3. If all the following conditions are met, try to add a comment to the discussion; otherwise, do not respond:
       * The discussion is not closed.
       * The latest comment is not from you or other agents (marked as "Response from XXX Agent").
       * The latest comment is asking a question or requesting information.
