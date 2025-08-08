@@ -50,7 +50,7 @@ Or `python -m adk_answering_agent.answer_discussions --recent 10` to answer the 
 
 ## GitHub Workflow Mode
 
-The `main.py` is reserved for the Github Workflow. The detailed setup for the automatic workflow is TBD.
+The `main.py` is reserved for the GitHub Workflow. The detailed setup for the automatic workflow is TBD.
 
 ---
 

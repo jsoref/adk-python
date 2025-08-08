@@ -87,7 +87,7 @@ async def list_most_recent_discussions(count: int = 1) -> list[int] | None:
 def process_arguments():
   """Parses command-line arguments."""
   parser = argparse.ArgumentParser(
-      description="A script that answer questions for Github discussions.",
+      description="A script that answer questions for GitHub discussions.",
       epilog=(
           "Example usage: \n"
           "\tpython -m adk_answering_agent.answer_discussions --recent 10\n"
