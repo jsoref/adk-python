@@ -189,7 +189,7 @@ async def _collect_eval_results(
 
 
 @deprecated(
-    "This method is deprecated and will be removed in fututre release. Please"
+    "This method is deprecated and will be removed in future release. Please"
     " use LocalEvalService to define your custom evals."
 )
 async def run_evals(
