@@ -63,7 +63,7 @@ root_agent = Agent(
         information that is not in the document store. Do not invent citations which are not in the document store.
       * **Be Objective**: your answer should be based on the facts you found in the document store, do not be misled by user's assumptions or user's understanding of ADK.
       * If you can't find the answer or information in the document store, **do not** respond.
-      * Inlclude a short summary of your response in the comment as a TLDR, e.g. "**TLDR**: <your summary>".
+      * Include a short summary of your response in the comment as a TLDR, e.g. "**TLDR**: <your summary>".
       * Have a divider line between the TLDR and your detail response.
       * Do not respond to any other discussion except the one specified by the user.
       * Please include your justification for your decision in your output
