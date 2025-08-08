@@ -220,7 +220,7 @@ class GeminiLlmConnection(BaseLlmConnection):
         ]
         yield LlmResponse(content=types.Content(role='model', parts=parts))
       if message.session_resumption_update:
-        logger.info('Redeived session reassumption message: %s', message)
+        logger.info('Received session reassumption message: %s', message)
         yield (
             LlmResponse(
                 live_session_resumption_update=message.session_resumption_update
