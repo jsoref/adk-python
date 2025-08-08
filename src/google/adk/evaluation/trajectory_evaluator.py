@@ -165,7 +165,7 @@ class TrajectoryEvaluator(Evaluator):
       following keys:
         1) query
         2) response
-        3) acutal_tool_use
+        3) actual_tool_use
         4) expected_tool_use
 
       Here is a sample eval_dataset value with one entry:
@@ -183,7 +183,7 @@ class TrajectoryEvaluator(Evaluator):
                 }
               }
             ],
-            "acutal_tool_use": [
+            "actual_tool_use": [
               {
                 "tool_name": "roll_die",
                 "tool_input": {
