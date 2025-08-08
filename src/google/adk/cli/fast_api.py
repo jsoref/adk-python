@@ -84,7 +84,7 @@ def get_fast_api_app(
   def _parse_agent_engine_resource_name(agent_engine_id_or_resource_name):
     if not agent_engine_id_or_resource_name:
       raise click.ClickException(
-          "Agent engine resource name or resource id can not be empty."
+          "Agent engine resource name or resource id cannot be empty."
       )
 
     # "projects/my-project/locations/us-central1/reasoningEngines/1234567890",
@@ -113,7 +113,7 @@ def get_fast_api_app(
 
       rag_corpus = memory_service_uri.split("://")[1]
       if not rag_corpus:
-        raise click.ClickException("Rag corpus can not be empty.")
+        raise click.ClickException("Rag corpus cannot be empty.")
       envs.load_dotenv_for_agent("", agents_dir)
       memory_service = VertexAiRagMemoryService(
           rag_corpus=f'projects/{os.environ["GOOGLE_CLOUD_PROJECT"]}/locations/{os.environ["GOOGLE_CLOUD_LOCATION"]}/ragCorpora/{rag_corpus}'
