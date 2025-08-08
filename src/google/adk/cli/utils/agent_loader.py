@@ -81,7 +81,7 @@ class AgentLoader(BaseAgentLoader):
       if e.name == agent_name:
         logger.debug("Module %s itself not found.", agent_name)
       else:
-        # it's the case the module imported by {agent_name}.agent module is not
+        # the module imported by {agent_name}.agent module is not
         # found
         e.msg = f"Fail to load '{agent_name}' module. " + e.msg
         raise e
@@ -120,8 +120,7 @@ class AgentLoader(BaseAgentLoader):
       if e.name == f"{agent_name}.agent" or e.name == agent_name:
         logger.debug("Module %s.agent not found.", agent_name)
       else:
-        # it's the case the module imported by {agent_name}.agent module is not
-        # found
+        # the module imported by {agent_name}.agent module is not found
         e.msg = f"Fail to load '{agent_name}.agent' module. " + e.msg
         raise e
     except Exception as e:
