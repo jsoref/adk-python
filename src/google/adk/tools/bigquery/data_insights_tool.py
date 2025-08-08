@@ -36,7 +36,7 @@ def ask_data_insights(
   """Answers questions about structured data in BigQuery tables using natural language.
 
   This function takes a user's question (which can include conversational
-  history for context) andreferences to specific BigQuery tables, and sends
+  history for context) and references to specific BigQuery tables, and sends
   them to a stateless conversational API.
 
   The API uses a GenAI agent to understand the question, generate and execute
