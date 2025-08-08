@@ -137,7 +137,7 @@ class Gemini(BaseLlm):
       thought_text = ''
       text = ''
       usage_metadata = None
-      # for sse, similar as bidi (see receive method in gemini_llm_connecton.py),
+      # for sse, similar as bidi (see receive method in gemini_llm_connection.py),
       # we need to mark those text content as partial and after all partial
       # contents are sent, we send an accumulated event which contains all the
       # previous partial content. The only difference is bidi rely on
