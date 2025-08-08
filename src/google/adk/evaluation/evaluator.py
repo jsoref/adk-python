@@ -48,7 +48,7 @@ class EvaluationResult(BaseModel):
 
 
 class Evaluator(ABC):
-  """A merics evaluator interface."""
+  """A metrics evaluator interface."""
 
   def evaluate_invocations(
       self,
