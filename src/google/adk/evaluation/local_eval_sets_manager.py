@@ -207,7 +207,7 @@ class LocalEvalSetsManager(EvalSetsManager):
   @override
   def create_eval_set(self, app_name: str, eval_set_id: str):
     """Creates an empty EvalSet given the app_name and eval_set_id."""
-    self._validate_id(id_name="Eval Set Id", id_value=eval_set_id)
+    self._validate_id(id_name="Eval Set ID", id_value=eval_set_id)
 
     # Define the file path
     new_eval_set_path = self._get_eval_set_file_path(app_name, eval_set_id)
