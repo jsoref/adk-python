@@ -141,7 +141,7 @@ def convert_session_to_eval_invocations(session: Session) -> list[Invocation]:
       # The content present in this event is the user content.
       user_content = event.content
       invocation_id = event.invocation_id
-      invocaton_timestamp = event.timestamp
+      invocation_timestamp = event.timestamp
 
       # Find the corresponding tool usage or response for the query
       tool_uses: list[genai_types.FunctionCall] = []
@@ -183,7 +183,7 @@ def convert_session_to_eval_invocations(session: Session) -> list[Invocation]:
           Invocation(
               user_content=user_content,
               invocation_id=invocation_id,
-              creation_timestamp=invocaton_timestamp,
+              creation_timestamp=invocation_timestamp,
               intermediate_data=IntermediateData(
                   tool_uses=tool_uses,
                   intermediate_responses=intermediate_responses[:-1],
