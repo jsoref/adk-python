@@ -285,7 +285,7 @@ class BaseLlmFlow(ABC):
         async for llm_response in llm_connection.receive():
           if llm_response.live_session_resumption_update:
             logger.info(
-                'Update session resumption hanlde:'
+                'Update session resumption handle:'
                 f' {llm_response.live_session_resumption_update}.'
             )
             invocation_context.live_session_resumption_handle = (
