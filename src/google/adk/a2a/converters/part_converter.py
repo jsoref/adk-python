@@ -88,7 +88,7 @@ def convert_a2a_part_to_genai_part(
     # This is mainly for converting human in the loop and auth request and
     # response.
     # TODO once A2A defined how to suervice such information, migrate below
-    # logic accordinlgy
+    # logic accordingly
     if (
         part.metadata
         and _get_adk_metadata_key(A2A_DATA_PART_METADATA_TYPE_KEY)
@@ -183,7 +183,7 @@ def convert_genai_part_to_a2a_part(
   # This is mainly for converting human in the loop and auth request and
   # response.
   # TODO once A2A defined how to suervice such information, migrate below
-  # logic accordinlgy
+  # logic accordingly
   if part.function_call:
     return a2a_types.Part(
         root=a2a_types.DataPart(
