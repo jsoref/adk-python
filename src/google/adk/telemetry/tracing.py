@@ -86,12 +86,12 @@ def _safe_json_serialize(obj) -> str:
 def trace_agent_invocation(
     span: trace.Span, agent: BaseAgent, ctx: InvocationContext
 ) -> None:
-  """Sets span attributes immedietely available on agent invocation according to OTEL semconv version 1.37.
+  """Sets span attributes immediately available on agent invocation according to OTEL semconv version 1.37.
 
   Args:
     span: Span on which attributes are set.
     agent: Agent from which attributes are gathered.
-    ctx: InvocationContext from which attrbiutes are gathered.
+    ctx: InvocationContext from which attributes are gathered.
 
   Inference related fields are not set, due to their planned removal from invoke_agent span:
   https://github.com/open-telemetry/semantic-conventions/issues/2632
